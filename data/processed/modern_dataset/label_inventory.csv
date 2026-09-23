@@ -1,0 +1,22 @@
+﻿raw_label,sample_count,percentage,paper_mentioned,sufficient_for_training,label_status,eligible_for_modern_v1,modern_v1_exclusion_reason,notes
+三块瓦脸,73,26.84,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+碎脸,45,16.54,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+象形脸,35,12.87,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+花三块瓦脸,27,9.93,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+整脸,17,6.25,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+,16,5.88,not_evaluated,no,missing,no,missing_raw_face_type,Missing 谱式 in source metadata; excluded from modern_v1.
+十字门脸,15,5.51,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+六分脸,10,3.68,not_evaluated,yes,present,yes,,Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.
+僧道脸,8,2.94,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+元宝脸,6,2.21,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+歪脸,5,1.84,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+神仙脸,5,1.84,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+太监脸,2,0.74,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+元宝类,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+小妖脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+枣核脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+白粉脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+窝头脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+筝形脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+腰子脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.
+角筝形脸,1,0.37,not_evaluated,no,present,no,class_below_min_samples_per_class_10,Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.

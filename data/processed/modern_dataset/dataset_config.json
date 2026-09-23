@@ -1,0 +1,306 @@
+{
+  "dataset_name": "POPF modern_v1",
+  "inputs": {
+    "candidate_image_manifest": "data/processed/272_candidate/image_manifest.csv",
+    "candidate_metadata_raw": "data/processed/272_candidate/metadata_raw.csv",
+    "candidate_reconciliation": "docs/LEGACY_DATASET_RECONCILIATION.md",
+    "raw_image_archive": "data/raw/脸谱/整理工作/爬虫脸谱图集.zip",
+    "raw_metadata_file": "data/raw/脸谱新一步/272数据张丹阳.xls"
+  },
+  "label_policy": {
+    "analysis_basis": "current XLS raw labels only",
+    "exclude_missing_labels_from_modern_v1": true,
+    "min_samples_per_class": 10,
+    "normalize_to_paper_16_classes": false,
+    "paper_label_alignment": "ignored_per_project_owner_instruction",
+    "preserve_raw_labels": true,
+    "source_field": "谱式"
+  },
+  "labels": [
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "26.84",
+      "raw_label": "三块瓦脸",
+      "sample_count": "73",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "16.54",
+      "raw_label": "碎脸",
+      "sample_count": "45",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "12.87",
+      "raw_label": "象形脸",
+      "sample_count": "35",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "9.93",
+      "raw_label": "花三块瓦脸",
+      "sample_count": "27",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "6.25",
+      "raw_label": "整脸",
+      "sample_count": "17",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "missing",
+      "modern_v1_exclusion_reason": "missing_raw_face_type",
+      "notes": "Missing 谱式 in source metadata; excluded from modern_v1.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "5.88",
+      "raw_label": "",
+      "sample_count": "16",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "5.51",
+      "raw_label": "十字门脸",
+      "sample_count": "15",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "yes",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "",
+      "notes": "Included in modern_v1 by the 2026 minimum sample policy using the current XLS raw label.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "3.68",
+      "raw_label": "六分脸",
+      "sample_count": "10",
+      "sufficient_for_training": "yes"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "2.94",
+      "raw_label": "僧道脸",
+      "sample_count": "8",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "2.21",
+      "raw_label": "元宝脸",
+      "sample_count": "6",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "1.84",
+      "raw_label": "歪脸",
+      "sample_count": "5",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "1.84",
+      "raw_label": "神仙脸",
+      "sample_count": "5",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.74",
+      "raw_label": "太监脸",
+      "sample_count": "2",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "元宝类",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "小妖脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "枣核脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "白粉脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "窝头脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "筝形脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "腰子脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    },
+    {
+      "eligible_for_modern_v1": "no",
+      "label_status": "present",
+      "modern_v1_exclusion_reason": "class_below_min_samples_per_class_10",
+      "notes": "Excluded from modern_v1 because sample_count < 10; preserved in modern_all_candidates.csv.",
+      "paper_mentioned": "not_evaluated",
+      "percentage": "0.37",
+      "raw_label": "角筝形脸",
+      "sample_count": "1",
+      "sufficient_for_training": "no"
+    }
+  ],
+  "loader_policy": {
+    "augmentation": "none",
+    "color_mode": "RGB",
+    "copy_images_to_processed": false,
+    "default_image_size": [
+      224,
+      224
+    ],
+    "image_size_convention": "PIL (width, height)",
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "read_mode": "direct_zip_member"
+  },
+  "mapping_policy": {
+    "description": "Image 001 is paired with metadata 序号 1, continuing through 272. The one-to-one sequence mapping is accepted for the current project dataset based on project-owner confirmation.",
+    "mapping_evidence": "Project owner confirmed on 2026-09-20 that Excel 序号 and the image filename number are one-to-one for the current POPF dataset.",
+    "mapping_status": "user_confirmed_sequence_mapping"
+  },
+  "outputs": {
+    "all_candidates": "modern_all_candidates.csv",
+    "dataset_manifest": "dataset_manifest.csv",
+    "directory": "data/processed/modern_dataset",
+    "label_inventory": "label_inventory.csv",
+    "test": "test.csv",
+    "train": "train.csv",
+    "validation": "validation.csv"
+  },
+  "purpose": "Prepare a reproducible dataset for modern visual model training. No model training is performed by this build.",
+  "quality_policy": {
+    "do_not_copy_or_augment_images": true,
+    "do_not_modify_raw": true,
+    "duplicate_detection_key": "image_sha256",
+    "leakage_rule": "No identical SHA-256 may appear in more than one split."
+  },
+  "split_policy": {
+    "algorithm": "For each eligible raw label, sort by image_id, shuffle with Python random.Random(seed), assign rounded 15 percent to test, rounded 15 percent to validation, and the remainder to train.",
+    "dataset_subset": "modern_v1",
+    "random_seed": 42,
+    "stratified_by": "raw_face_type",
+    "target_ratios": {
+      "test": 0.15,
+      "train": 0.7,
+      "validation": 0.15
+    }
+  },
+  "status": "2026 Reconstruction"
+}

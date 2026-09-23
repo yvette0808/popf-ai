@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="POPF 京剧脸谱数字传承项目的本地 AI 识别原型。"
+    />
+    <title>POPF · 京剧脸谱 AI 识别</title>
+    <link rel="stylesheet" href="/static/style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="/">
+        <span class="brand-mark" aria-hidden="true">谱</span>
+        <span>
+          <strong>POPF</strong>
+          <small>京剧脸谱数字传承</small>
+        </span>
+      </a>
+      <div class="topbar-note">
+        <span class="status-dot" aria-hidden="true"></span>
+        <span>本地原型 · 2026 Reconstruction</span>
+      </div>
+    </header>
+
+    <main class="page-shell">
+      <section class="intro-band">
+        <div>
+          <p class="eyebrow">FACE PATTERN / AI RECOGNITION</p>
+          <h1>京剧脸谱<br /><em>AI 识别</em></h1>
+          <p class="intro-copy">
+            上传一张脸谱图片，查看当前模型的候选类别，再回到已有资料中寻找角色与剧目的线索。
+          </p>
+        </div>
+        <div class="intro-meta">
+          <span>7 类</span>
+          <span>Top-3 候选</span>
+          <span>资料可追溯</span>
+        </div>
+      </section>
+
+      <section class="workspace" aria-label="图片识别工作区">
+        <div class="upload-panel panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">01 / UPLOAD</p>
+              <h2>从一张图片开始</h2>
+            </div>
+            <span class="section-index">上传</span>
+          </div>
+
+          <div id="dropzone" class="dropzone" tabindex="0" role="button">
+            <input
+              id="fileInput"
+              type="file"
+              accept=".jpg,.jpeg,.png,image/jpeg,image/png"
+              hidden
+            />
+            <div class="dropzone-icon" aria-hidden="true">＋</div>
+            <p class="dropzone-title">拖入脸谱图片，或点击选择</p>
+            <p class="dropzone-hint">支持 JPG、JPEG、PNG · 单张不超过 10 MB</p>
+            <button id="chooseButton" class="button button-quiet" type="button">
+              选择图片
+            </button>
+          </div>
+
+          <div id="uploadPreview" class="upload-preview is-hidden">
+            <div class="preview-image-wrap">
+              <img id="previewImage" alt="待识别图片预览" />
+            </div>
+            <div class="preview-copy">
+              <span class="label-chip">待识别</span>
+              <strong id="previewName">未选择文件</strong>
+              <span id="previewMeta">-</span>
+              <button id="predictButton" class="button button-primary" type="button">
+                <span aria-hidden="true">↗</span>
+                开始识别
+              </button>
+            </div>
+          </div>
+
+          <p id="uploadError" class="message message-error is-hidden" role="alert"></p>
+          <p class="privacy-note">
+            图片仅在本地服务内存中完成推理；反馈记录只保存匿名哈希与预测信息。
+          </p>
+        </div>
+
+        <aside class="reference-panel panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">ARCHIVE SAMPLE</p>
+              <h2>历史资料样本</h2>
+            </div>
+            <span class="section-index">001</span>
+          </div>
+          <div class="reference-image-wrap">
+            <img src="/api/reference-image/001" alt="历史资料中的脸谱样本" />
+            <span class="reference-stamp">POPF / 001</span>
+          </div>
+          <p class="reference-caption">
+            当前产品使用已核验的历史图片与元数据作为参考资料，不新增或改写原始资产。
+          </p>
+        </aside>
+      </section>
+
+      <section id="resultSection" class="result-section is-hidden" aria-live="polite">
+        <div class="section-heading result-heading">
+          <div>
+            <p class="eyebrow">02 / RECOGNITION</p>
+            <h2>AI 识别结果</h2>
+          </div>
+          <span id="resultSource" class="result-source">-</span>
+        </div>
+
+        <div class="result-grid">
+          <div class="prediction-panel panel">
+            <div class="prediction-label">最可能类别</div>
+            <div class="prediction-main">
+              <div>
+                <h3 id="top1Label">-</h3>
+                <p id="top1Note">模型置信度</p>
+              </div>
+              <strong id="top1Probability" class="top1-probability">-</strong>
+            </div>
+            <div class="confidence-track" aria-hidden="true">
+              <span id="top1Track"></span>
+            </div>
+            <p id="predictionDisclaimer" class="disclaimer">-</p>
+          </div>
+
+          <div class="candidates-panel panel">
+            <div class="panel-title-row">
+              <h3>其他候选</h3>
+              <span>Top-3</span>
+            </div>
+            <div id="candidateList" class="candidate-list"></div>
+          </div>
+        </div>
+
+        <div class="knowledge-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">03 / ARCHIVE NOTES</p>
+              <h2>相关资料</h2>
+            </div>
+            <span id="knowledgeCount" class="section-index">-</span>
+          </div>
+          <p id="knowledgeSourceNote" class="knowledge-source-note">-</p>
+          <div id="knowledgeRecords" class="knowledge-records"></div>
+        </div>
+
+        <div class="related-section">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">04 / RELATED IMAGES</p>
+              <h2>相关脸谱</h2>
+            </div>
+            <span class="section-index">资料集</span>
+          </div>
+          <div id="relatedImages" class="related-grid"></div>
+        </div>
+
+        <section class="feedback-section panel">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">05 / FEEDBACK</p>
+              <h2>这个识别结果准确吗？</h2>
+            </div>
+            <span class="section-index">反馈</span>
+          </div>
+          <div id="feedbackButtons" class="feedback-buttons">
+            <button id="correctButton" class="button button-feedback" type="button">
+              <span aria-hidden="true">✓</span>
+              准确
+            </button>
+            <button id="incorrectButton" class="button button-feedback" type="button">
+              <span aria-hidden="true">×</span>
+              不准确
+            </button>
+          </div>
+          <div id="correctionPanel" class="correction-panel is-hidden">
+            <label for="correctLabel">你认为它属于哪个类别？</label>
+            <select id="correctLabel"></select>
+            <button id="submitCorrection" class="button button-primary" type="button">
+              提交反馈
+            </button>
+          </div>
+          <p id="feedbackMessage" class="message is-hidden" role="status"></p>
+        </section>
+      </section>
+
+      <p id="globalError" class="message message-error is-hidden" role="alert"></p>
+    </main>
+
+    <footer class="footer">
+      <div>
+        <strong>POPF</strong>
+        <span>京剧脸谱数字传承项目 · 2026 Reconstruction</span>
+      </div>
+      <p>
+        当前模型基于 7 类 modern_v1 数据训练，识别结果仅作为辅助参考，请结合候选类别与相关资料进一步判断。
+      </p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+  </body>
+</html>
+

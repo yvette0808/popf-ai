@@ -1,0 +1,49 @@
+# Operating-system and editor files
+.DS_Store
+.AppleDouble
+.LSOverride
+Thumbs.db
+.vscode/
+.idea/
+
+# Python environments and caches
+.venv/
+venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+
+# Secrets and local configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Runtime-only Web MVP outputs
+artifacts/feedback/
+artifacts/logs/
+artifacts/torch_cache/
+
+# Keep the selected public checkpoint only. Other weights and experiment
+# checkpoints are local training artifacts and are intentionally excluded.
+artifacts/experiments/
+artifacts/models/*/
+!artifacts/models/resnet18_conservative_finetune/
+artifacts/models/resnet18_conservative_finetune/*.pt
+!artifacts/models/resnet18_conservative_finetune/best_val_macro_f1.pt
+
+# The historical raw library is not a public release bundle. The one small
+# archive below is retained because the local Web MVP serves related images
+# directly from its ZIP members.
+data/raw/*
+!data/raw/脸谱/
+data/raw/脸谱/*
+!data/raw/脸谱/整理工作/
+data/raw/脸谱/整理工作/*
+!data/raw/脸谱/整理工作/爬虫脸谱图集.zip

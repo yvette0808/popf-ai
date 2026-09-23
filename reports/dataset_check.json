@@ -1,0 +1,109 @@
+{
+  "status": "passed",
+  "structural_checks": "passed",
+  "dataset_counts": {
+    "train": 154,
+    "validation": 34,
+    "test": 34
+  },
+  "class_counts": {
+    "train": {
+      "三块瓦脸": 51,
+      "六分脸": 6,
+      "十字门脸": 11,
+      "整脸": 11,
+      "碎脸": 31,
+      "花三块瓦脸": 19,
+      "象形脸": 25
+    },
+    "validation": {
+      "三块瓦脸": 11,
+      "六分脸": 2,
+      "十字门脸": 2,
+      "整脸": 3,
+      "碎脸": 7,
+      "花三块瓦脸": 4,
+      "象形脸": 5
+    },
+    "test": {
+      "三块瓦脸": 11,
+      "六分脸": 2,
+      "十字门脸": 2,
+      "整脸": 3,
+      "碎脸": 7,
+      "花三块瓦脸": 4,
+      "象形脸": 5
+    }
+  },
+  "label_mapping": {
+    "三块瓦脸": 0,
+    "碎脸": 1,
+    "象形脸": 2,
+    "花三块瓦脸": 3,
+    "整脸": 4,
+    "十字门脸": 5,
+    "六分脸": 6
+  },
+  "label_range": [
+    0,
+    6
+  ],
+  "preprocess": {
+    "image_size": [
+      224,
+      224
+    ],
+    "pipeline": "JPEG -> RGB -> Resize -> float tensor -> ImageNet Normalize",
+    "augmentation": "none"
+  },
+  "pytorch": {
+    "status": "passed",
+    "batches": {
+      "train": {
+        "shape": [
+          8,
+          3,
+          224,
+          224
+        ],
+        "image_dtype": "torch.float32",
+        "label_dtype": "torch.int64",
+        "label_min": 0,
+        "label_max": 6,
+        "sample_image_id": "050",
+        "sample_label_name": "象形脸",
+        "sample_label_id": 2
+      },
+      "validation": {
+        "shape": [
+          8,
+          3,
+          224,
+          224
+        ],
+        "image_dtype": "torch.float32",
+        "label_dtype": "torch.int64",
+        "label_min": 0,
+        "label_max": 0,
+        "sample_image_id": "008",
+        "sample_label_name": "三块瓦脸",
+        "sample_label_id": 0
+      },
+      "test": {
+        "shape": [
+          8,
+          3,
+          224,
+          224
+        ],
+        "image_dtype": "torch.float32",
+        "label_dtype": "torch.int64",
+        "label_min": 0,
+        "label_max": 0,
+        "sample_image_id": "023",
+        "sample_label_name": "三块瓦脸",
+        "sample_label_id": 0
+      }
+    }
+  }
+}

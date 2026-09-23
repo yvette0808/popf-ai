@@ -1,0 +1,22 @@
+﻿original_label,count,possible_normalized_label,normalization_status,evidence,notes
+三块瓦脸,73,三块瓦脸,exact_text_observed_not_model_approval,The literal text is present in the 272 XLS and is one of the six paper-named categories. This does not prove the row was used in the 2019 model.,Keep as an observed label; do not treat this inventory as a model split.
+碎脸,45,碎脸,exact_text_observed_not_model_approval,The literal text is present in the 272 XLS and is one of the six paper-named categories. This does not prove the row was used in the 2019 model.,Keep as an observed label; do not treat this inventory as a model split.
+象形脸,35,象形脸,exact_text_observed_not_model_approval,The literal text is present in the 272 XLS and is one of the six paper-named categories. This does not prove the row was used in the 2019 model.,Keep as an observed label; do not treat this inventory as a model split.
+花三块瓦脸,27,花三块瓦脸,exact_text_observed_not_model_approval,The literal text is present in the 272 XLS and is one of the six paper-named categories. This does not prove the row was used in the 2019 model.,Keep as an observed label; do not treat this inventory as a model split.
+整脸,17,整脸,exact_text_observed_not_model_approval,The literal text is present in the 272 XLS and is one of the six paper-named categories. This does not prove the row was used in the 2019 model.,Keep as an observed label; do not treat this inventory as a model split.
+,16,,missing_original_label,The 272 XLS contains empty values in 原始字段 谱式.,Do not infer a category for missing labels.
+十字门脸,15,十字门脸,exact_text_observed_not_model_approval,The literal text is present in the 272 XLS and is one of the six paper-named categories. This does not prove the row was used in the 2019 model.,Keep as an observed label; do not treat this inventory as a model split.
+六分脸,10,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+僧道脸,8,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+元宝脸,6,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+歪脸,5,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+神仙脸,5,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+太监脸,2,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+元宝类,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+小妖脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+枣核脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+白粉脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+窝头脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+筝形脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+腰子脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
+角筝形脸,1,,unresolved,"The literal text is present in the 272 XLS, but no accepted normalization to the paper's model classes was established.",Requires source-level or human-reviewed label evidence.
