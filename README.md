@@ -157,6 +157,32 @@ docker run --rm -p 8000:8000 popf-web
 
 Docker 镜像只复制 MVP 所需的代码、processed 元数据、label mapping、一个历史图片 ZIP 和当前最佳 checkpoint。
 
+## 线上部署
+
+仓库包含 [`render.yaml`](render.yaml)，可用于从公开 GitHub 仓库创建 Render Docker Web Service。Render Blueprint 会：
+
+1. 从 `main` 分支读取当前 `Dockerfile`。
+2. 构建包含 Web MVP、历史图片 ZIP、processed 元数据和当前 checkpoint 的镜像。
+3. 使用 `/health` 作为 HTTP health check。
+4. 为服务提供一个公开的 HTTPS `onrender.com` 地址。
+
+部署步骤：
+
+1. 登录 [Render Dashboard](https://dashboard.render.com/)。
+2. 选择 **New → Blueprint**，连接 `yvette0808/popf-ai`。
+3. 选择 `main` 分支并确认 `render.yaml`。
+4. 创建服务，等待镜像构建和 `/health` 通过。
+5. 使用 Render 分配的公开 URL 访问 Web MVP。
+
+当前配置使用 Render `free` 计划，服务在一段时间无访问后可能休眠，首次访问会有冷启动延迟。模型使用 CPU 推理；如果免费实例在构建或启动时出现内存不足，需要在 Render 中升级实例规格，不需要修改模型或数据集。
+
+线上部署边界：
+
+- 这是 `2026 Reconstruction` Web MVP，不是生产级识别系统。
+- `artifacts/feedback/feedback.jsonl` 写入容器本地文件系统；免费实例重启或重新部署后，反馈记录可能丢失。
+- 不要把用户原始图片、个人信息、API 密钥或其他敏感数据写入日志或反馈。
+- 线上服务只支持当前 `modern_v1` 的 7 类标签。
+
 ## API
 
 ### `GET /health`

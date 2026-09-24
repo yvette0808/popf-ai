@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: popf-ai
+    runtime: docker
+    plan: free
+    region: oregon
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
